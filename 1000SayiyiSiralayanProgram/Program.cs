@@ -32,9 +32,11 @@ namespace _1000SayiyiSiralayanProgram
 
             //Bubble Sort ile
             int n = sayilar.Length-1;
-            
-            for (int i = 0; i < n - 1; i++)
+            bool b;
+            b = true;
+            for (int i = 0; i < (n - 1)&&b; i++)
             {
+                b = false;
                 for (int j = 0; j < n; j++)
                 {
                     if (sayilar[j] > sayilar[j + 1])
@@ -42,6 +44,7 @@ namespace _1000SayiyiSiralayanProgram
                         temp = sayilar[j];
                         sayilar[j] = sayilar[j + 1];
                         sayilar[j + 1] = temp;
+                        b = true;
                     }
                     
                 }
